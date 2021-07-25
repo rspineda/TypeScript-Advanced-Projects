@@ -1,0 +1,21 @@
+{
+  "name": "football-results",
+  "version": "1.0.0",
+  "description": "football_results_from_CSV_data_translated_to_TSC_data",
+  "main": "index.js",
+  "scripts": {
+    "start:build": "tsc -w",
+    "start:run": "nodemon build/index.js",
+    "start": "concurrently npm:start:*"
+  },
+  "keywords": [
+    "stats",
+    "csv"
+  ],
+  "author": "Ronald Pineda",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^6.2.0",
+    "nodemon": "^2.0.12"
+  }
+}
