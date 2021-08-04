@@ -2,8 +2,11 @@ import fs from 'fs';
 import { dateStringToDate } from './utils';
 import { MatchResult } from './MatchResult';
 
+//Defining the tuple
+type MatchData = [Date, string, string, number, number, MatchResult, string];
+
 export class CsvFileReader {
-  data: string[][] = [];
+  data: MatchData[] = [];
 
   constructor(public filename: string) {};
 
@@ -16,7 +19,7 @@ export class CsvFileReader {
       .map((row: string): string[] => {
       return row.split(',')
       })
-      .map((row: string[]): any => {
+      .map((row: string[]): MatchData => {
         //[ strings] --> [ parsed items]
         //has to return an array with 7 items: [date, string, string, number, number, enum string, string ] 
         return [
