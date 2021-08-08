@@ -1,23 +1,12 @@
-import { dateStringToDate } from './utils';
-import { MatchResult } from './MatchResult';
+import { CsvFileReader } from "./CsvFileReader";
+import { dateStringToDate } from "./utils";
+import { MatchResult } from "./MatchResult";
 
 //Defining the tuple
 type MatchData = [Date, string, string, number, number, MatchResult, string];
 
-interface DataReader {
-    read(): void;
-    data: string[][];
-};
-
-export class MatchReader {
-
-  matches: MatchData[] = [];
-
-  constructor(public reader: DataReader) {};
-
-  load(): void {
-    this.reader.read();
-    this.matches = this.reader.data.map((row: string[]): MatchData => {
+export class MatchReader extends CsvFileReader<MatchData> {
+    mapRow(row: string[]): MatchData {
       //[ strings] --> [ parsed items]
       //has to return an array with 7 items: [date, string, string, number, number, enum string, string ] 
       return [
@@ -29,6 +18,5 @@ export class MatchReader {
         row[5] as MatchResult,
         row[6]
       ];
-    });
-  }
+    }
 };
