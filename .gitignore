@@ -1,3 +1,8 @@
 /stats/build
 /stats/node_modules
 /stats/package-lock.json
+
+/web/build
+/web/dist
+/web/node_modules
+/web/package-lock.json

@@ -1,0 +1,18 @@
+{
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  },
+  "name": "web-framework",
+  "version": "1.0.0",
+  "description": "TS_web_framework",
+  "main": "index.js",
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "framework"
+  ],
+  "author": "Ronald Pineda",
+  "license": "ISC"
+}
