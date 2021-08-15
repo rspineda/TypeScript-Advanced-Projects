@@ -6,14 +6,17 @@ const user = new User({name: 'Ronald', age: 20});
 user.set({name: 'Ronnie'});
 
 //testing events registration
-user.on('change', () => {});
-user.on('click', () => {});
-user.on('change', () => {});
+user.on('change', () => {
+  console.log('Change #1');
+});
+user.on('click', () => {
+  console.log('Click event was triggered');
+});
+user.on('change', () => {
+  console.log('Change #2');
+});
 
-console.log(user);
-
-
-/* console.log(user.get('name'));
-console.log(user.get('age')); */
+//console.log(user);
+user.trigger('click');
 
 //Run cod => pracel index.html
