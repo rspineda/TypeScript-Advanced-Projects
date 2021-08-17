@@ -6,9 +6,12 @@
   "version": "1.0.0",
   "description": "TS_web_framework",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start:db": "json-server -w db.json",
+    "start:parcel": "parcel index.html"
   },
   "keywords": [
     "framework"
