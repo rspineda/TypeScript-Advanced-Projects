@@ -43,4 +43,15 @@ export class User {
       this.set(response.data);
     });
   }
+
+  save(): void {
+    const id = this.get('id');
+    if(id) {
+      // user is already on database
+      axios.put(`http://localhost:3000/users/${id}`, this.data);
+    } else {
+      // user is not on database yet
+      axios.post(`http://localhost:3000/users`, this.data);
+    }
+  }
 }
