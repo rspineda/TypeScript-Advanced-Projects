@@ -3,7 +3,7 @@ export class Attributes<T> {
   
   //returning the same type as as the 'key' argument, so it will return
   //number if the key argument is number, string if the key argument is string ..
-  get<K extends keyof T>(key: string): T[K] {
+  get = <K extends keyof T>(key: string): T[K] => {
     return this.data[key];
   }
 
