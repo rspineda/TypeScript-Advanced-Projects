@@ -7,5 +7,6 @@ const name = user.get('name');
 console.log(`user's name is: ${name}`);
 
 user.on('change', () => console.log('user was changed !!'));
-user.trigger('change');
+//user.trigger('change');
+user.set({ name: 'Manolitus' });
 
