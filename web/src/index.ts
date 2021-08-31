@@ -11,7 +11,12 @@ user.on('change', () => console.log('user was changed !!'));
 user.set({ name: 'Manolitus' }); */
 
 //testing feching:
-const user = new User({id: 1});
+/* const user = new User({id: 1});
 user.on('change', () => console.log(user));
-user.fetch();
+user.fetch(); */
+
+//testing save:
+const user = new User({id:1, name: 'Roni Moloni', age: 30});
+user.on('save', () => console.log(user));
+user.save();
 
