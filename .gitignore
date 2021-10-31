@@ -7,3 +7,9 @@
 /web/node_modules
 /web/package-lock.json
 /web/.cache/
+
+/express-server/build
+/express-server/dist
+/express-server/node_modules
+/express-server/package-lock.json
+/express-server/.cache
